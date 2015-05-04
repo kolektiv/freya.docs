@@ -1,0 +1,2 @@
+# freya.docs
+Freya Documentation
