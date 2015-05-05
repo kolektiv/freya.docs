@@ -32,6 +32,14 @@ If there's content you'd like to see and which doesn't appear to be referenced (
    machine/index
    hypermedia/index
 
+.. _tutorials:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Tutorials
+
+   tutorials/index
+
 .. _meta:
 
 .. toctree::
