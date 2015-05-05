@@ -10,21 +10,19 @@ Welcome to the documentation for `Freya <http://freya.io>`_, a functional web pr
 
 If there's content you'd like to see and which doesn't appear to be referenced (even as a placeholder) please raise an issue `here <https://github.com/freya-fs/freya.documentation/issues>`_ and we'll do our best.
 
-.. _discovery:
-
 .. toctree::
    :maxdepth: 2
    :caption: Discovery
-
+   :name: discovery
+             
    introduction/index
    getting-started/index
    concepts/index
 
-.. _reference:
-
 .. toctree::
    :maxdepth: 2
    :caption: Reference
+   :name: reference
 
    core/index
    types/index
@@ -32,20 +30,18 @@ If there's content you'd like to see and which doesn't appear to be referenced (
    machine/index
    hypermedia/index
 
-.. _tutorials:
-
 .. toctree::
    :maxdepth: 2
    :caption: Tutorials
-
+   :name: tutorials
+             
    tutorials/index
-
-.. _meta:
 
 .. toctree::
    :maxdepth: 2
    :caption: Meta
-   
+   :name: meta
+
    about/index
 
 .. Indices and tables
