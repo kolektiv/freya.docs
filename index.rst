@@ -18,6 +18,7 @@ If there's content you'd like to see and which doesn't appear to be referenced (
 
    introduction/index
    getting-started/index
+   concepts/index
 
 .. _reference:
 
@@ -25,7 +26,6 @@ If there's content you'd like to see and which doesn't appear to be referenced (
    :maxdepth: 2
    :caption: Reference
 
-   concepts/index
    core/index
    types/index
    router/index
