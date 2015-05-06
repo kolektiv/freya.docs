@@ -6,7 +6,7 @@ OWIN (Open Web Interface for .NET - see `owin.org <owin.org>`_) is a simple, com
 Interface
 ---------
 
-The OWIN standard interface is not a particularly complex one, as it is designed to be a fairly "lowest common denominator" approach, with the aim of being applicable to the broadest possible ecosystem (so no relying in .NET features only accessible from specific languages, minority versions or frameworks, etc.)
+The OWIN standard interface is not a particularly complex one, as it's designed to be a fairly "lowest common denominator" approach, with the aim of being applicable to the broadest possible ecosystem (so no relying on .NET features only accessible from specific languages, minority versions or frameworks, etc.)
 
 The standard, in basic form, looks like this (forgive the C# for a moment):
 
