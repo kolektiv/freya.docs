@@ -4,24 +4,24 @@ Introduction
 Overview
 --------
 
-Freya is a bit different. If you're used to MVC-style frameworks -- ASP.NET MVC, Rails, those kinds of things -- it'll probably feel a bit peculiar to start with. But with that peculiarity comes the ability to work more accurately with HTTP, and to find the right level of abstraction for the problem you're trying to solve (or so we hope).
+Freya is a bit different. If you're used to MVC-style frameworks -- ASP.NET MVC, Rails, etc. -- it'll probably feel a bit peculiar, but with that peculiarity comes the ability to work more accurately with HTTP and find the right level of abstraction for the problem you're trying to solve. (Or so we hope.)
 
-With Freya, you can work in a very simple way -- just reading data from requests and writing data to responses. You can take a step up the abstraction ladder and start to read and write data in a strongly typed way, adding some compile-time safety to your interactions with HTTP.
+Freya allows you to work in a very simple way, just reading data from requests and writing data to responses. You can take a step up the abstraction ladder and start to read and write data in a strongly typed way, adding some compile-time safety to your interactions with HTTP.
 
-You can take it further, working with a state-machine style approach to handling HTTP requests -- no longer explicitly handling a request, but simply answering questions. Does this resource exist? Can the client handle the representations I can send? Does the client have an older version than I do? Ok - let's send the data. Hooray, 200 OK!
+Freya also provides a state-machine style approach to handling HTTP requests, no longer explicitly handling a request but simply answering questions. Does this resource exist? Can the client handle the representations I can send? Does the client have an older version than I do? Ok - let's send the data. Hooray, 200 OK!
 
-You can combine the tools that Freya provides and create your own abstractions too. Create reusable functions that you can apply to provide fine grained security, new standards support, or anything else you like. Freya aims to be a great toolbox as well as a great tool.
+You can combine the tools that Freya provides and create your own abstractions, too. Create reusable functions that you can apply to provide fine grained security, new standards support, or anything else you like. Freya aims to be a great toolbox, as well as a great tool.
 
 Focus
 -----
 
-At the moment, Freya has had most thought applied to it as a tool for accurate API design and construction. It doesn't currently include a templating language, or client-side framework. Those things could absolutely be built on Freya (and perhaps you will?) but they're not there today. We'd love to see what you can build on Freya though -- if you start to take it off in new directions, please show us!
+Most of the effort building Freya was applied to making it as a tool for accurate API design and construction. It doesn't currently include a templating language or client-side framework. Those things could absolutely be built on Freya (and perhaps you will?) but they're not there today. We'd love to see what you can build on Freya, though. If you start to take it off in new directions, please show us!
 
 Status
 ------
 
-At the moment, Freya is in prerelease, and nearing 1.0 rapidly. We've got big plans and ideas for the post-1.0 roadmap (great introspection tools, hypermedia abstractions, and more) but we want to get 1.0 out there for people to play with.
+Freya is in pre-release, rapidly approaching 1.0. We've got big plans and ideas for the post-1.0 roadmap, such as great introspection tools, hypermedia abstractions, and more, but we first want to stabilize our current design by delivering 1.0.
 
 If you want to track us hitting 1.0, follow `this GitHub issue <https://github.com/freya-fs/freya/issues/95>`_ -- it won't be long now!
 
-We think Freya is usable and useful right now though, so please jump in and have a go, especially as we get the first wave of documentation written -- we'd love to know what's clear, what's hazy, and what's just word soup (it isn't always easy to write about things you know inside out!)
+We think Freya is usable and useful right now, so please jump in and have a go! We are still working on the first wave of documentation, and we'd love to know what's clear, what's hazy, and what is and isn't useful and clear. (It isn't always easy to write about things you know inside out!)
