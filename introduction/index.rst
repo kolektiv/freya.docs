@@ -20,8 +20,6 @@ At the moment, Freya has had most thought applied to it as a tool for accurate A
 Status
 ------
 
-At the moment, Freya is in prerelease, and nearing 1.0 rapidly. We've got big plans and ideas for the post-1.0 roadmap (great introspection tools, hypermedia abstractions, and more) but we want to get 1.0 out there for people to play with.
+Freya recently went 1.0! That means we're pretty confident that people can start using it for "real" things -- and that we're happy to try and help with that. We've got big plans and ideas for the post-1.0 roadmap too (great introspection tools, hypermedia abstractions, and more).
 
-If you want to track us hitting 1.0, follow `this GitHub issue <https://github.com/freya-fs/freya/issues/95>`_ -- it won't be long now!
-
-We think Freya is usable and useful right now though, so please jump in and have a go, especially as we get the first wave of documentation written -- we'd love to know what's clear, what's hazy, and what's just word soup (it isn't always easy to write about things you know inside out!)
+If you want to keep an eye on what's coming up, we track everything in the open on GitHub -- head over to our `milestones <https://github.com/freya-fs/freya/milestones>`_.

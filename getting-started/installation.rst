@@ -5,11 +5,11 @@ Freya can be installed via `NuGet <http://nuget.org>`_. While Freya is composed 
 
 .. code-block:: shell
 
-    PM> Install-Package Freya -Pre
+    PM> Install-Package Freya
 
+If you want to just use a part of Freya, don't worry -- simply grab the main package that you need, all required dependencies will be installed automatically.
+    
 .. tip::
 
-   Freya is currently in prerelease, so the -Pre flag is required. If you want to track Freya hitting 1.0, follow `this issue <https://github.com/freya-fs/freya/issues/95>`_ on GitHub.
-
-If you're a `Paket <https://fsprojects.github.io/Paket/>`_ user -- and if you're not, it's definitely worth considering -- Freya will play nicely. We make every effort to properly respect `SemVer <http://semver.org>`_ so that you can get the most from Paket.
+   If you're a `Paket <https://fsprojects.github.io/Paket/>`_ user -- and if you're not, it's definitely worth considering -- Freya will play nicely. We make every effort to properly respect `SemVer <http://semver.org>`_ so that you can get the most from Paket.
 
