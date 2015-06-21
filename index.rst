@@ -16,6 +16,13 @@ If there's content you'd like to see and which doesn't appear to be referenced (
 
 .. toctree::
    :maxdepth: 2
+   :caption: Tutorials
+   :name: tutorials
+             
+   tutorials/index
+   
+.. toctree::
+   :maxdepth: 2
    :caption: Reference
    :name: reference
 
@@ -24,13 +31,6 @@ If there's content you'd like to see and which doesn't appear to be referenced (
    router/index
    machine/index
    hypermedia/index
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Tutorials
-   :name: tutorials
-             
-   tutorials/index
 
 .. toctree::
    :maxdepth: 2
