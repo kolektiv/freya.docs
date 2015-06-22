@@ -48,3 +48,22 @@ We can see that we're using a computation expression method first here in ``Frey
 There are two related state methods in the ``Freya`` module, ``Freya.mapState`` and ``Freya.setState``. They do exactly what you think they do -- applying a function over the state, and setting the state to a provided value respectively.
 
 Of course, anyone used to programming in a helpfully-typed language will be looking at this function with it's risky-looking string-based dictionary access and casting, and wondering whether there might not be a better way. Well in Freya there is (in our opinion at least). The next thing to talk about is :doc:`/core/lenses`...
+
+Summary
+-------
+
+We've covered the basic abstraction over state in Freya, the basic type and some simple functions for working with it.
+
+.. code-block:: fsharp
+
+   // Freya<'a> (FreyaState is described)
+   type Freya<'a> = FreyaState -> Async<'a * FreyaState>
+
+   // Gets the current FreyaState within a freya computation expression
+   Freya.getState : Freya<FreyaState>
+
+   // Sets the current FreyaState within a freya computation expression
+   Freya.setState : FreyaState -> Freya<unit>
+
+   // Maps the function provided over the current FreyaState within a freya computation expression
+   Freya.mapState : (FreyaState -> FreyaState) -> Freya<unit>

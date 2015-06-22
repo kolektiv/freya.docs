@@ -23,8 +23,8 @@ If there's content you'd like to see and which doesn't appear to be referenced (
    
 .. toctree::
    :maxdepth: 2
-   :caption: Reference
-   :name: reference
+   :caption: Guide
+   :name: guide
 
    core/index
    types-and-lenses/index
