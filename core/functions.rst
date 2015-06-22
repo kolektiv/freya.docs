@@ -34,7 +34,7 @@ The signature of this function will be ``int -> Freya<int>``, showing us a nice 
 State
 -----
 
-There would clearly be no point in passing the state to and from functions if we could access it. We accomplish this in Freya by a set of functions, accessible through the ``Freya`` module. Here's an example of getting the state within the ``freya`` computation expression, and reading a value from it (don't worry -- there will be nicer and safer ways to do this!)
+There would clearly be no point in passing the state to and from functions unless we can access it. We accomplish this in Freya by a set of functions, accessible through the ``Freya`` module. Here's an example of getting the state within the ``freya`` computation expression, and reading a value from it (don't worry -- there will be nicer and safer ways to do this!)
 
 .. code-block:: fsharp
 
