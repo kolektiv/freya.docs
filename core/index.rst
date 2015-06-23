@@ -10,4 +10,4 @@ Core
    lenses
    pipelines
    integration
-   
+   further/index   
