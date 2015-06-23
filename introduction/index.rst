@@ -12,6 +12,11 @@ You can take it further, working with a state-machine style approach to handling
 
 You can combine the tools that Freya provides and create your own abstractions too. Create reusable functions that you can apply to provide fine grained security, new standards support, or anything else you like. Freya aims to be a great toolbox as well as a great tool.
 
+Deployment
+----------
+
+Freya is built on the `OWIN <http://owin.org>`_ standard, taking great care to remain compatible with open standards. This means that it can run on any OWIN compatible server, whether that's self-hosted, on IIS, on Azure, Windows or Linux, etc. You can get Freya running easily, and integrate it well with existing technology when you need to. 
+
 Focus
 -----
 
