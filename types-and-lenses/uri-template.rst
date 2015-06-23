@@ -1,8 +1,19 @@
 URI Template
 ============
 
-.. note::
-   
-   Sorry! We haven't written this yet but we're working on it. We're tracking documentation requirements using GitHub issues. You can follow our progress on this topic `here <https://github.com/freya-fs/freya.docs/issues/12>`_.
+The Arachne ``Arachne.Uri.Template`` library implements types which represent the semantics of the following standard:
 
-   If you'd like to contribute, see our section on :doc:`/about/contributing`.
+* `RFC 6570 -- URI Template <http://tools.ietf.org/html/rfc6570>`_
+
+Strongly typed representations and parsers are given, along with matching and rendering logic.
+
+No lenses are given as these types are not present directly within HTTP messages. These types are used extensively in Routing, and in work on the representation of Hypermedia standards.
+
+.. code-block:: fsharp
+
+   // Working directly with the types
+   open Arachne.Uri.Template
+
+.. note::
+
+   Full documentation for the individual type designs within Arachne is not currently available, but will be added at a later stage. Inspecting the values returned however should be straightforward and logical, and all typed representations map very closely to the logical design/grammar defined within the appropriate RFC or Recommendation.
