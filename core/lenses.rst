@@ -19,8 +19,8 @@ Aether
 
 Freya uses the `Aether <https://github.com/xyncro/aether>`_ lens library. If you'd like to read more about the lens library in isolation, there is an `introductory guide <kolektiv.github.io/fsharp/aether/2014/08/13/aether-guide/>`_ blog post available. The source is also quite readable. For use within Freya however, it is probably most useful to begin by seeing the use of lenses in action.
 
-Functions
----------
+Usage
+-----
 
 We've seen previously that we could pull data out of our state and manually convert it, so let's see what that looks like compared with a lens based approach:
 
