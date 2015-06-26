@@ -30,7 +30,6 @@ If there's content you'd like to see and which doesn't appear to be referenced (
    types-and-lenses/index
    router/index
    machine/index
-   hypermedia/index
 
 .. toctree::
    :maxdepth: 2
