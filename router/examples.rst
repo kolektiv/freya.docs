@@ -25,7 +25,7 @@ Matching simple lists of values in URIs can be useful. Using simple URI Template
        UriTemplate.Parse "/{values*}"
 
    // Path: /one,two,three
-   Freya.getLensPartial (Route.list "values") // -> Some [ "one"; "two"; "three" ]
+   Freya.getLensPartial (Route.List_ "values") // -> Some [ "one"; "two"; "three" ]
 
 Pairs
 -----
@@ -41,7 +41,7 @@ Matching key/value pairs can also be a useful technique:
        UriTemplate.Parse "/{pairs*}"
 
    // Path: /one=a,two=b,three=c
-   Freya.getLensPartial (Route.keys "pairs") // -> Some [ ("one", "a"); ("two", "b"); ("three", "c") ]
+   Freya.getLensPartial (Route.Keys_ "pairs") // -> Some [ ("one", "a"); ("two", "b"); ("three", "c") ]
 
 Paths
 -----
@@ -57,13 +57,13 @@ It is often useful to want to match a whole path, regardless of what it might be
        UriTemplate.Parse "{/segments*}"
 
    // Path: /one/two/three
-   Freya.getLensPartial (Route.list "segments") // -> Some [ "one"; "two"; "three" ]
+   Freya.getLensPartial (Route.List_ "segments") // -> Some [ "one"; "two"; "three" ]
        
    let prefixedPathTemplate =
        UriTemplate.Parse "/one{/segments*}"
 
    // Path: /one/two/three
-   Freya.getLensPartial (Route.list "segments") // -> Some [ "two"; "three" ]
+   Freya.getLensPartial (Route.List_ "segments") // -> Some [ "two"; "three" ]
    
 
    

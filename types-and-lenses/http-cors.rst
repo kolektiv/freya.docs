@@ -20,7 +20,7 @@ These types and lenses are probably not likely to be commonly used, especially w
    // Working directly with the types if required
    open Arachne.Http.Cors
 
-The lenses are all provided under the ``Request.Headers`` and ``Response.Headers`` modules (e.g. ``Request.Headers.accessControlAllowOrigin``).
+The lenses are all provided under the ``Request.Headers`` and ``Response.Headers`` modules (e.g. ``Request.Headers.AccessControlAllowOrigin_``).
 
 .. note::
 

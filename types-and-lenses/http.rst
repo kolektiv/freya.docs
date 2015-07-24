@@ -24,7 +24,7 @@ The HTTP lenses and types are likely to be the most commonly used lenses dealing
    // Working directly with the types if required
    open Arachne.Http
 
-The lenses are all provided under the ``Request`` and ``Response`` modules (e.g. ``Request.path``), along with sub-modules for headers (e.g. ``Request.Headers.accept``).
+The lenses are all provided under the ``Request`` and ``Response`` modules (e.g. ``Request.Path_``), along with sub-modules for headers (e.g. ``Request.Headers.Accept_``).
 
 .. note::
 

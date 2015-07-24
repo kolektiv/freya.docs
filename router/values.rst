@@ -28,11 +28,11 @@ What does that look like in this case? Well, here's a function which will return
 
    let readId =
        freya {
-           return! Freya.getLensPartial (Route.atom "id") }
+           return! Freya.getLensPartial (Route.Atom_ "id") }
 
 There are several things to note here. The first is that route lenses are partial. We can't statically be sure that a value will be present (even though intuitively we know that it will be in certain contexts), so route lenses are partial. Additionally, route lenses are parameterised (as we can see, we need to pass it the name of the value we expect to exist, in this case "id").
 
-Another key point to note is that there are three available lenses available (all within the ``Route`` module). In this case, we see ``Route.atom``, but ``Route.list`` and ``Route.keys`` are also available. Briefly, this is due to the nature of data within the URI Template specification. It is possible to render and match more complex data structures with URI Templates (see `the URI Template RFC <http://tools.ietf.org/html/rfc6570>`_ for a sense of how URI Templates can be used in more advanced ways). Simple values will only usually require the use of the ``Route.atom`` lens, but see :doc:`/router/examples` for some useful samples of using URI Templates to enable more powerful routing.
+Another key point to note is that there are three available lenses available (all within the ``Route`` module). In this case, we see ``Route.Atom_``, but ``Route.List_`` and ``Route.Keys_`` are also available. Briefly, this is due to the nature of data within the URI Template specification. It is possible to render and match more complex data structures with URI Templates (see `the URI Template RFC <http://tools.ietf.org/html/rfc6570>`_ for a sense of how URI Templates can be used in more advanced ways). Simple values will only usually require the use of the ``Route.Atom_`` lens, but see :doc:`/router/examples` for some useful samples of using URI Templates to enable more powerful routing.
 
 Summary
 -------
@@ -44,10 +44,10 @@ We've seen the simple approach to extracting data from matched routes, using sim
    open Freya.Router
 
    // Lens for extracting string values from a matched route
-   Route.atom : string -> PLens<FreyaState, string>
+   Route.Atom_ : string -> PLens<FreyaState, string>
 
    // Lens for extracting string list values from a matched route
-   Route.list : string -> PLens<FreyaState, string list>
+   Route.List_ : string -> PLens<FreyaState, string list>
 
    // Lens for extracting string pair values from a matched route
-   Route.keys : string -> PLens<FreyaState, (string * string) list>
+   Route.Keys_ : string -> PLens<FreyaState, (string * string) list>

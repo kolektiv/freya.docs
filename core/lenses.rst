@@ -35,9 +35,9 @@ We've seen previously that we could pull data out of our state and manually conv
    // The lens way
    let readPathLens =
        freya {
-           return! Freya.getLens Request.path }
+           return! Freya.getLens Request.Path_ }
      
-As we can see, the lens approach is certainly simpler. We use the ``Freya.getLens`` function, and pass it the lens ``Request.path`` (defined in ``Freya.Lenses.Http``). That lens is the equivalent of focusing in to the correct part of our state dictionary, and extracting the data as a string. So, it's simpler -- and it's also safer. The lens gives us typed access to the data structure -- it is both accessor and "converter".
+As we can see, the lens approach is certainly simpler. We use the ``Freya.getLens`` function, and pass it the lens ``Request.Path_`` (defined in ``Freya.Lenses.Http``). That lens is the equivalent of focusing in to the correct part of our state dictionary, and extracting the data as a string. So, it's simpler -- and it's also safer. The lens gives us typed access to the data structure -- it is both accessor and "converter".
 
 Of course, we can use the same lens to read and write (and therefore to map). If we wanted to *write* to the request, overwriting the request path, we could do so (whether we would want to is a valid question!) Here's what that would look like:
 
@@ -45,7 +45,7 @@ Of course, we can use the same lens to read and write (and therefore to map). If
 
    let writePath path =
        freya {
-           do! Freya.setLens Request.path path }
+           do! Freya.setLens Request.Path_ path }
 
 We use the ``Freya.setLens`` function to write -- and notably, we can simply use the same lens. This is because lenses encapsulate operations in both directions -- effectively a getter and a setter, in old school language.
 
@@ -62,7 +62,7 @@ Here's an example using a lens which is a partial lens:
 
    let readStatusCode =
        freya {
-           return! Freya.getLensPartial Response.statusCode }
+           return! Freya.getLensPartial Response.StatusCode_ }
 
 This function is of type ``Freya<int option>``, as the partial lens returns an option of the value (the response status code is not a required data element in the specification).
 
@@ -81,7 +81,7 @@ Here's a quick example, where we are retrieving a header value from the request,
 
    let readAccept =
        freya {
-           return! Freya.getLensPartial Request.Headers.accept }
+           return! Freya.getLensPartial Request.Headers.Accept_ }
 
    // Might return something like...
 
