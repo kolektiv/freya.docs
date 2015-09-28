@@ -30,7 +30,7 @@ Freya.Core
     work as standard OWIN apps and middleware. (If these terms are unfamiliar,
     see the section on :doc:`OWIN </concepts/owin>`.)
 
-    Read more in the :doc:`Core guide </guides/core/index>`.
+    Read more in the :doc:`Core guide </core/index>`.
 
 Freya.Lenses.*
     Freya.Core retains the untyped nature of the OWIN environment dictionary.
@@ -39,7 +39,7 @@ Freya.Lenses.*
     The Freya.Lenses.* libraries extend the typed Arachne lenses to better work
     with OWIN and Freya.Core.
 
-    Read more in the :doc:`Types and Lenses guide </guides/types-and-lenses/index>`.
+    Read more in the :doc:`Types and Lenses guide </types-and-lenses/index>`.
 
 Freya.Router
     Web applications typically dispatch requests to handlers by means of URI
@@ -47,7 +47,7 @@ Freya.Router
     the `URI Templates RFC <http://tools.ietf.org/html/rfc6570>`_ to match
     request URLs and invoke relevant handlers.
 
-    Read more in the :doc:`Router guide </guides/router/index>`.
+    Read more in the :doc:`Router guide </router/index>`.
 
 Freya.Machine
     If you're used to MVC-style frameworks -- ASP.NET MVC, Rails, etc. --
@@ -73,7 +73,7 @@ Freya.Machine
             // ...
         }
 
-    Read more in the :doc:`Machine guide </guides/machine/index>`.
+    Read more in the :doc:`Machine guide </machine/index>`.
 
 You can combine the tools that Freya provides and create your own abstractions, too.
 Create reusable functions that you can apply to provide fine grained security,
