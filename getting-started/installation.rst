@@ -1,7 +1,7 @@
 Installation
 ============
 
-Freya can be installed via `NuGet <http://nuget.org>`_. While Freya is composed of multiple packages (as it's designed to be a *modular stack* rather than a *monolithic framework*) most people will simply want to grab "all" of the latest Freya release. For this there is a meta-package called Freya, which includes all of the commonly used components of Freya.
+Freya can be installed via `NuGet <http://nuget.org>`_. While Freya is composed of multiple packages, you may want to grab the Freya meta-package, includes all of the commonly used components of Freya. Once you get a feel for what's in each package, you will then know which packages you want for various projects.
 
 .. code-block:: shell
 

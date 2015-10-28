@@ -67,7 +67,7 @@ Freya.Machine
     state machine defined in the HTTP RFCs. You need merely tell Freya which pieces
     you wish to use. ::
 
-        freya {
+        freyaMachine {
             using http
             using httpCors
             // ...
@@ -78,7 +78,7 @@ Freya.Machine
 You can combine the tools that Freya provides and create your own abstractions, too.
 Create reusable functions that you can apply to provide fine grained security,
 new standards support, or anything else you like. Freya aims to be a great toolbox,
-as well as a great tool.
+not just a great tool.
 
 Deployment
 ----------
@@ -91,11 +91,11 @@ well with existing technology when you need.
 Focus
 -----
 
-Most of the effort building Freya was applied to making it a tool for accurate API
-design and construction. It doesn't currently include a templating language or
-client-side framework. Those things could absolutely be built on Freya (and perhaps
-you will?) but they're not there today. We'd love to see what you can build on Freya,
-though. If you start to take it off in new directions, please show us!
+Most of the effort building Freya was applied to accurately representing HTTP.
+It doesn't currently include a templating language or client-side framework.
+Those things could absolutely be built on Freya, but they're not there today.
+We'd love to see what you can build on Freya, though.
+If you start to take it off in new directions, please show us!
 
 Status
 ------
