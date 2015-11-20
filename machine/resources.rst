@@ -29,37 +29,33 @@ Let's have a first look at a very simple resource. We'll look at some of the ele
    // Properties
 
    let mediaTypes =
-       freya {
-           return [ MediaType.Text ] }
+       Freya.init [ MediaType.Text ]
 
    let methods =
-       freya {
-           return [ GET ] }
+       Freya.init [ GET ]
 
    // Decisions
 
    let available =
-       freya {
-           return true }
+       Freya.init true
 
    // Handlers
 
    let content _ =
-       freya {
-           return {
-               Description =
-                 { Charset = Some Charset.Utf8
-                   Encodings = None
-                   MediaType = Some MediaType.Text
-                   Languages = None }
-               Data = "Hello World!"B } }
+       Freya.init
+         {  Description =
+               {  Charset = Some Charset.Utf8
+                  Encodings = None
+                  MediaType = Some MediaType.Text
+                  Languages = None }
+            Data = "Hello World!"B } }
 
    // Resource
 
    let helloWorld =
        freyaMachine {
            using http
-           mediaTypesSupported (freya { return [ MediaType.Text ] })
+           mediaTypesSupported (Freya.init [ MediaType.Text ])
            methodsSupported methods
            serviceAvailable available
            handleOk content } |> FreyaMachine.toPipeline
