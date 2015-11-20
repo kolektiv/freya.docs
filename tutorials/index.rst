@@ -18,6 +18,13 @@ We'll be producing short screencasts to complement the reference guides. To begi
 Freya Hello World (from Introduction to Freya video)
 ----------------------------------------------------
 
+.. code-block:: powershell
+
+   Install-Package Freya
+   Install-Package Microsoft.Owin.SelfHost
+
+.. code-block:: fsharp
+
     module MyWebSite
     
     open System
@@ -50,6 +57,8 @@ Freya Hello World (from Introduction to Freya video)
 
 Simple Static File Server
 -------------------------
+
+.. code-block:: fsharp
 
     module SelfHostWebSite
     

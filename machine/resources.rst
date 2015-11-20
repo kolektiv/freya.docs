@@ -10,19 +10,28 @@ Much like the :doc:`/router/index` library, the Machine library introduces a com
 
 Let's have a first look at a very simple resource. We'll look at some of the elements here, while some we'll expand upon in the following sections.
 
+.. code-block:: powershell
+
+   Install-Package Freya
+   Install-Package Microsoft.Owin.SelfHost
+
 .. code-block:: fsharp
+
+   module HelloWorldWebSite
 
    open Arachne.Http
    open Freya.Core
    open Freya.Machine
    open Freya.Machine.Extensions.Http
+   open Microsoft.Owin.Hosting
+   open System
 
    // Properties
 
    let mediaTypes =
        freya {
            return [ MediaType.Text ] }
-                
+
    let methods =
        freya {
            return [ GET ] }
@@ -32,7 +41,7 @@ Let's have a first look at a very simple resource. We'll look at some of the ele
    let available =
        freya {
            return true }
-   
+
    // Handlers
 
    let content _ =
@@ -50,10 +59,23 @@ Let's have a first look at a very simple resource. We'll look at some of the ele
    let helloWorld =
        freyaMachine {
            using http
-           mediaTypesSupported mediaTypes
+           mediaTypesSupported (freya { return [ MediaType.Text ] })
            methodsSupported methods
            serviceAvailable available
            handleOk content } |> FreyaMachine.toPipeline
+
+   type Exercise() =
+       member __.Configuration() =
+           OwinAppFunc.ofFreya helloWorld
+
+   [<EntryPoint>]
+   let main _ =
+       let url = "http://localhost:8080"
+       let _ = WebApp.Start<Exercise> (url)
+       Console.WriteLine("Serving site at " + url)
+       Console.WriteLine("Press ENTER to cancel")
+       let _ = Console.ReadLine ()
+       0
 
 This is a very simple resource, although we have split out configuration which we could have declared inline. This is common, as we will often find that properties of resources are shared by multiple resources, and we will often end up composing sets of properties to form a specific resource -- we'll look at that in more detail in a later section.
 
