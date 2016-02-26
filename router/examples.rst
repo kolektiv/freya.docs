@@ -9,7 +9,7 @@ The URI Template library, combined with the ``Freya.Router`` library, gives a co
 
 .. important::
 
-   Some of the specification of URI Templates is aimed at parts of URIs outside of the path (specific formulations for query strings, fragments, etc.) While you can use these features in Freya, the Freya router only matches on the path, and not the combined path and query string. We are considering making matching against query strings possible with the router, but opinions are welcome on whether this would be a useful change.
+   The specification of URI Templates is aimed at parts of URIs outside of the path (specific formulations for query strings, fragments, etc.) This means that Freya expects to match a full path and query string. You can make sure this works when you may have a query string by defining a catch-all query string on the end of your route URI Templates.
 
 Lists
 -----
@@ -25,7 +25,7 @@ Matching simple lists of values in URIs can be useful. Using simple URI Template
        UriTemplate.Parse "/{values*}"
 
    // Path: /one,two,three
-   Freya.getLensPartial (Route.List_ "values") // -> Some [ "one"; "two"; "three" ]
+   Freya.Optic.get (Route.list_ "values") // -> Some [ "one"; "two"; "three" ]
 
 Pairs
 -----
@@ -41,7 +41,7 @@ Matching key/value pairs can also be a useful technique:
        UriTemplate.Parse "/{pairs*}"
 
    // Path: /one=a,two=b,three=c
-   Freya.getLensPartial (Route.Keys_ "pairs") // -> Some [ ("one", "a"); ("two", "b"); ("three", "c") ]
+   Freya.Optic.get (Route.keys_ "pairs") // -> Some [ ("one", "a"); ("two", "b"); ("three", "c") ]
 
 Paths
 -----
@@ -57,13 +57,13 @@ It is often useful to want to match a whole path, regardless of what it might be
        UriTemplate.Parse "{/segments*}"
 
    // Path: /one/two/three
-   Freya.getLensPartial (Route.List_ "segments") // -> Some [ "one"; "two"; "three" ]
+   Freya.Optic.get (Route.list_ "segments") // -> Some [ "one"; "two"; "three" ]
        
    let prefixedPathTemplate =
        UriTemplate.Parse "/one{/segments*}"
 
    // Path: /one/two/three
-   Freya.getLensPartial (Route.List_ "segments") // -> Some [ "two"; "three" ]
+   Freya.Optic.get (Route.list_ "segments") // -> Some [ "two"; "three" ]
    
 
    

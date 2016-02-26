@@ -91,6 +91,23 @@ Following on, we define a handler, called ``content``. This will seem rather com
 
 Finally, we define our actual resource, assigning the values we've already seen to the resource. This should be self-explanatory, with the exception of the first line ``using http``. We'll look more at what that means in the :doc:`/machine/extension` section.
 
+Type Inference
+--------------
+
+Much like in Freya Router, Machine uses static type inference to give a more concise API. For example, most of the properties, decisions, etc. which can be set and which expect a ``freya<'a>`` function can also simply be given an ``'a``, which will be statically inferred and converted to a ``freya<'a>`` behind the scenes. That means that the following is true:
+
+.. code-block:: fsharp
+
+   let helloWorld =
+       freyaMachine {
+           mediaTypesSupported (Freya.init [ MediaType.Text ]) }
+
+   // is the same as...
+
+   let helloWorld2 =
+       freyaMachine {
+           mediaTypesSupported MediaType.Text }
+
 Elements
 --------
 
