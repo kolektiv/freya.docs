@@ -35,7 +35,7 @@ and we'll do our best to address it.
    :name: guide
 
    core/index
-   types-and-lenses/index
+   types-and-optics/index
    router/index
    machine/index
 

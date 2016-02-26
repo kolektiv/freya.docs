@@ -7,7 +7,7 @@ The Arachne ``Arachne.Uri.Template`` library implements types which represent th
 
 Strongly typed representations and parsers are given, along with matching and rendering logic.
 
-No lenses are given as these types are not present directly within HTTP messages. These types are used extensively in Routing, and in work on the representation of Hypermedia standards.
+No optics are given as these types are not present directly within HTTP messages. These types are used extensively in Routing, and in work on the representation of Hypermedia standards.
 
 .. code-block:: fsharp
 

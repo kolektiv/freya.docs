@@ -8,19 +8,19 @@ The Arachne ``Arachne.Http.Cors`` library implements types which represent the s
   
 The implementation of the Recommendation consists of a set of typed headers. Additionally the Origin header is implemnted as defined in RFC 6454. Strongly typed representations and parsers are given.
 
-The ``Freya.Lenses.Http.Cors`` library provides lenses from the ``FreyaState`` to the various aspects of the request and response defined within the Recommendation and RFC. These lenses are usable directly within a ``freya`` computation expression, working with the lens functions detailed in :doc:`/core/lenses`.
+The ``Freya.Lenses.Http.Cors`` library provides optics from the ``FreyaState`` to the various aspects of the request and response defined within the Recommendation and RFC. These optics are usable directly within a ``freya`` computation expression, working with the optic functions detailed in :doc:`/core/optics`.
 
-These types and lenses are probably not likely to be commonly used, especially when relying on some of the higher level abstractions available in the Freya stack, but they can be useful for writing new low-level code.
+These types and optics are probably not likely to be commonly used, especially when relying on some of the higher level abstractions available in the Freya stack, but they can be useful for writing new low-level code.
 
 .. code-block:: fsharp
 
-   // Working with Freya lenses
+   // Working with Freya optics
    open Freya.Lenses.Http.Cors
 
    // Working directly with the types if required
    open Arachne.Http.Cors
 
-The lenses are all provided under the ``Request.Headers`` and ``Response.Headers`` modules (e.g. ``Request.Headers.AccessControlAllowOrigin_``).
+The optics are all provided under the ``Request.Headers`` and ``Response.Headers`` modules (e.g. ``Request.Headers.accessControlAllowOrigin_``).
 
 .. note::
 

@@ -7,7 +7,7 @@ Core
    :maxdepth: 2
 
    functions
-   lenses
+   optics
    pipelines
    integration
    further/index   

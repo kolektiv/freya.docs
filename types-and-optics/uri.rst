@@ -7,7 +7,7 @@ The Arachne ``Arachne.Uri`` library implements types which represent the semanti
 
 Strongly typed representations and parsers are given.
 
-No lenses are given as these types are not present directly within HTTP messages, but they are used within some types in the HTTP and HTTP CORS libraries. They are also used in higher levels of abstraction within the Freya stack.
+No optics are given as these types are not present directly within HTTP messages, but they are used within some types in the HTTP and HTTP CORS libraries. They are also used in higher levels of abstraction within the Freya stack.
 
 .. code-block:: fsharp
 

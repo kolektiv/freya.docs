@@ -8,7 +8,7 @@ The Arachne ``Arachne.Language`` library implements types which represent the se
 
 Strongly typed representations and parsers are given.
 
-No lenses are given as these types are not present directly within HTTP messages, but they are used within some types in the HTTP and HTTP CORS libraries, and may be used directly when working with some of the higher levels of abstraction in the Freya stack which expect strongly typed Language Tags/Ranges as configuration values.
+No optics are given as these types are not present directly within HTTP messages, but they are used within some types in the HTTP and HTTP CORS libraries, and may be used directly when working with some of the higher levels of abstraction in the Freya stack which expect strongly typed Language Tags/Ranges as configuration values.
 
 .. code-block:: fsharp
 

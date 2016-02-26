@@ -100,9 +100,9 @@ If you start to take it off in new directions, please show us!
 Status
 ------
 
-Freya recently went 1.0! That means we're pretty confident that people can start
-using it for "real" things -- and that we're happy to try and help with that. We've
-got big plans and ideas for the post-1.0 roadmap too (great introspection tools,
+Freya went 3.0 in February 2016! That means we're pretty confident that people can 
+use it for "real" things -- and that we're happy to try and help with that. We've
+got big plans and ideas for the post-3.0 roadmap too (great introspection tools,
 hypermedia abstractions, and more).
 
 If you want to keep an eye on what's coming up, we track everything in the open on

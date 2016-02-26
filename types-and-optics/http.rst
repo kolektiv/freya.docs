@@ -12,19 +12,19 @@ The Arachne ``Arachne.Http`` library implements types which represent the semant
 
 This set of RFCs covers basic types present in HTTP requests and responses, principally the data found in the headers of HTTP messages. Strongly typed representations and parsers are given.
 
-The ``Freya.Lenses.Http`` library provides lenses from the ``FreyaState`` to the various aspects of the request and response defined within the RFCs. These lenses are usable directly within a ``freya`` computation expression, working with the lens functions detailed in :doc:`/core/lenses`.
+The ``Freya.Lenses.Http`` library provides optics from the ``FreyaState`` to the various aspects of the request and response defined within the RFCs. These optics are usable directly within a ``freya`` computation expression, working with the optic functions detailed in :doc:`/core/optics`.
 
-The HTTP lenses and types are likely to be the most commonly used lenses dealing with request and response data. To use the lenses and types, the following modules should be opened:
+The HTTP optics and types are likely to be the most commonly used optics dealing with request and response data. To use the optics and types, the following modules should be opened:
 
 .. code-block:: fsharp
 
-   // Working with Freya lenses
+   // Working with Freya optics
    open Freya.Lenses.Http
 
    // Working directly with the types if required
    open Arachne.Http
 
-The lenses are all provided under the ``Request`` and ``Response`` modules (e.g. ``Request.Path_``), along with sub-modules for headers (e.g. ``Request.Headers.Accept_``).
+The optics are all provided under the ``Request`` and ``Response`` modules (e.g. ``Request.path_``), along with sub-modules for headers (e.g. ``Request.Headers.accept_``).
 
 .. note::
 
