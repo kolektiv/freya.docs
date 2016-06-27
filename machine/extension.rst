@@ -1,2 +1,0 @@
-Machine Graph Extension Model
-=============================
