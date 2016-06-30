@@ -8,7 +8,7 @@ Optics, as their name implies, enable you to *focus* on a particular part of a d
 Aether
 ------
 
-Freya uses the `Aether <https://github.com/xyncro/aether>`_ optics library. The guides to optics found there give a good introduction to the principles, along with more general information about the library itself (which is used extensively in Freya).
+Freya uses the Aether optics library. The guides to optics found there give a good introduction to the principles, along with more general information about the library itself (which is used extensively in Freya).
 
 * `Aether Guides <https://xyncro.tech/aether/guides/>`_ -- guides to the principles and usage of optics, with examples and explanation.
 * `Aether <https://xyncro.tech/aether>`_ -- the main Aether website.

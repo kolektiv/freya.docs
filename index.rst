@@ -29,7 +29,6 @@ Contributions to Freya (in any form) are very much welcomed, and if you wish to 
 
 .. toctree::
    :hidden:
-   :maxdepth: 1
 
    self
    contributing
@@ -38,31 +37,31 @@ Contributions to Freya (in any form) are very much welcomed, and if you wish to 
 .. toctree::
    :caption: Reference
    :hidden:
-   :maxdepth: 1
+   :includehidden:
               
-   Guides <documentation/reference/index>
-   Libraries <documentation/reference/libraries/index>
-   Integration <documentation/reference/integration/index>
+   Overview <documentation/reference/index>
+   documentation/reference/libraries/index
+   documentation/reference/integration/index
 
 .. toctree::
    :caption: Topics
    :glob:
    :hidden:
-   :maxdepth: 1
+   :includehidden:
 
-   Content <documentation/topics/index>
+   Overview <documentation/topics/index>
    documentation/topics/*
    
 .. toctree::
    :caption: Recipes
    :hidden:
-   :maxdepth: 1
+   :includehidden:
 
    Overview <documentation/recipes/index>
 
 .. toctree::
    :caption: Tutorials
    :hidden:
-   :maxdepth: 1
+   :includehidden:
 
    Overview <documentation/tutorials/index>

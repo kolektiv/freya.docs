@@ -5,8 +5,8 @@ Library documentation contains reference information for the libraries (and sets
 
 .. toctree::
    :hidden:
-   :maxdepth: 3
 
-   Core <core/index>
-   Types.* <types/index>
-   Optics.* <optics/index>
+   core/index
+   types/index
+   optics/index
+   routers/index
