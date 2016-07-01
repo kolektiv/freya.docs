@@ -13,7 +13,7 @@ Definitions
 
 Routes are defined by specifying a requirement for the HTTP method (or verb), a requirement for the path, and the ``Pipeline`` function to call if the route is matched. Route matching effectively happens in definition order precedence, although the router internally converts the route definitions to an optimised trie for performance reasons.
 
-Strongly typed values are used for the requirements, using types taken from the :doc:`/reference/libraries/types` libraries, in this case **Freya.Types.Http** and **Freya.Types.Uri.Template**, as well as types from **Freya.Routers.Uri.Template**. Here's an annotated example of setting up a router, including opening appropriate modules/namespace:
+Strongly typed values are used for the requirements, using types taken from the :doc:`/reference/libraries/types/index` libraries, in this case **Freya.Types.Http** and **Freya.Types.Uri.Template**, as well as types from **Freya.Routers.Uri.Template**. Here's an annotated example of setting up a router, including opening appropriate modules/namespace:
 
 .. code-block:: fsharp
 

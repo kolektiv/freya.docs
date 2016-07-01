@@ -10,4 +10,5 @@ Library documentation contains reference information for the libraries (and sets
    types/index
    optics/index
    routers/index
+   machines/index
    polyfills/index

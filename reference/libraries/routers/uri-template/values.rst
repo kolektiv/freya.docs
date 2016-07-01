@@ -1,7 +1,7 @@
 Values
 ======
 
-As seen in :doc:`/reference/routers/uri-template/routes`, it's quite simple to map routes (the combination of method and path specification) to ``Pipeline`` functions. Once a route is matched however, you will likely need the handler to have access to the data that was matched as part of the URI Template.
+As seen in :doc:`/reference/libraries/routers/uri-template/routes`, it's quite simple to map routes (the combination of method and path specification) to ``Pipeline`` functions. Once a route is matched however, you will likely need the handler to have access to the data that was matched as part of the URI Template.
 
 Here is one of the URI Templates from the previous section:
 
@@ -25,7 +25,7 @@ As with accessing data from the request or response, accessing data from the rou
 
 There are several things to note here. The first is that route optics are prisms. You can't statically be sure that a value will be present (even though intuitively you can know that it will be in certain contexts), so the optics must be prisms. Additionally, route optics are parameterised -- as shown, it is passed the name of the value sought, in this case "id").
 
-Another key point to note is that there are three available prisms available (all within the ``Route`` module). In this case, ``Route.atom_`` is used, but ``Route.list_`` and ``Route.keys_`` are also available. Briefly, this is due to the nature of data within the URI Template specification. It is possible to render and match more complex data structures with URI Templates (see `the URI Template RFC <http://tools.ietf.org/html/rfc6570>`_ for a sense of how URI Templates can be used in more advanced ways). Simple values will only usually require the use of the ``Route.atom_`` optic, but see :doc:`/reference/libraries/routers/uri-template/examples` for some useful samples of using URI Templates to enable more powerful routing.
+Another key point to note is that there are three available prisms available (all within the ``Route`` module). In this case, ``Route.atom_`` is used, but ``Route.list_`` and ``Route.keys_`` are also available. Briefly, this is due to the nature of data within the URI Template specification. It is possible to render and match more complex data structures with URI Templates (see `the URI Template RFC <http://tools.ietf.org/html/rfc6570>`_ for a sense of how URI Templates can be used in more advanced ways). Simple values will only usually require the use of the ``Route.atom_`` optic, but much more is possible -- see the relevant recipes for more information.
 
 Summary
 -------
