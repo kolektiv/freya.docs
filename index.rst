@@ -49,15 +49,18 @@ Contributions to Freya (in any form) are very much welcomed, and if you wish to 
    :hidden:
    :includehidden:
 
+   Overview <topics/index>
    topics/*
    
 .. toctree::
    :caption: Recipes
+   :glob:
    :hidden:
    :includehidden:
 
    Overview <recipes/index>
-
+   recipes/*
+      
 .. toctree::
    :caption: Tutorials
    :hidden:

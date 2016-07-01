@@ -13,12 +13,12 @@ Definitions
 
 Routes are defined by specifying a requirement for the HTTP method (or verb), a requirement for the path, and the ``Pipeline`` function to call if the route is matched. Route matching effectively happens in definition order precedence, although the router internally converts the route definitions to an optimised trie for performance reasons.
 
-Strongly typed values are used for the requirements, using types taken from the :doc:`/reference/libraries/types` libraries, in this case **Freya.Types.Http** and **Freya.Types.Uri.Template**, as well as types from **Freya.Routers.UriTemplate**. Here's an annotated example of setting up a router, including opening appropriate modules/namespace:
+Strongly typed values are used for the requirements, using types taken from the :doc:`/reference/libraries/types` libraries, in this case **Freya.Types.Http** and **Freya.Types.Uri.Template**, as well as types from **Freya.Routers.Uri.Template**. Here's an annotated example of setting up a router, including opening appropriate modules/namespace:
 
 .. code-block:: fsharp
 
    open Freya.Core
-   open Freya.Routers.UriTemplate
+   open Freya.Routers.Uri.Template
    open Freya.Types.Http
    open Freya.Types.Uri.Template
 
@@ -115,7 +115,7 @@ You will see that this potentially makes things clearer and more readable, allow
 Pipeline
 --------
 
-In earlier versions of Freya, it was neccessary to call an explicit ``toPipeline`` function to use a router as a pipeline. This is no longer needed in 3.0+. (the router implements ``Pipeline`` and thus anything which expects to be able to infer a pipeline can accept a router).
+In earlier versions of Freya, it was neccessary to call an explicit ``toPipeline`` function to use a router as a pipeline. This is no longer needed in 3.0+ -- the router implements ``Pipeline`` and thus anything which expects to be able to infer a pipeline can accept a router.
 
 URI Templates
 -------------

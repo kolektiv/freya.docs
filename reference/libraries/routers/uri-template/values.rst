@@ -1,28 +1,21 @@
 Values
 ======
 
-As seen in :doc:`/routers/routes`, it's quite simple to map routes (the combination of method and path specification) to ``FreyaPipeline`` functions. But once you're running a pipeline, how do you get access to the data that was matched as part of that route?
+As seen in :doc:`/reference/routers/uri-template/routes`, it's quite simple to map routes (the combination of method and path specification) to ``Pipeline`` functions. Once a route is matched however, you will likely need the handler to have access to the data that was matched as part of the URI Template.
 
-Route Lenses
-------------
-
-Let's revisit one of our URI Templates from the previous section:
+Here is one of the URI Templates from the previous section:
 
 .. code-block:: fsharp
 
     let routeA =
         UriTemplate.parse "/a/{id}"
 
-Quite simple and easy to understand -- and of course, we're going to want to know what the value of ``{id}`` is at some point when handling a request. Handily, the approach to doing so uses only tools we've already seen.
+You can see that if this route has been matched, a value for ``{id}`` should now exist. Freya aims for a consistent model of programming throughout, and so the approach to accessing this data is aligned to accessing any other data -- it is considered to be part of the state.
 
-The Freya router treats matched data (in this case the set of matches as part of matching the URI Template) as part of the state, pushing it in to the underlying OWIN *Environment*, where it can be read by any suitable code. And, just as with Request and Response data, we can provide lenses to this data -- in this case, in the ``Route`` module.
-
-The method of obtaining data from the route is just the same as obtaining data from the request -- simply use the optic functions and a suitable optic.
-
-Syntax
+Optics
 ------
 
-What does that look like in this case? Well, here's a function which will return that ``{id}`` value from our example:
+As with accessing data from the request or response, accessing data from the route requires the use of a suitable set of optics. These are provided under the ``Route`` module. Here's a function which will return the ``{id}`` value from the  example:
 
 .. code-block:: fsharp
 
@@ -30,24 +23,32 @@ What does that look like in this case? Well, here's a function which will return
        freya {
            return! Freya.Optic.get (Route.atom_ "id") }
 
-There are several things to note here. The first is that route optics are prisms. We can't statically be sure that a value will be present (even though intuitively we know that it will be in certain contexts), so we must define prisms. Additionally, route optics are parameterised (as we can see, we need to pass it the name of the value we expect to exist, in this case "id").
+There are several things to note here. The first is that route optics are prisms. You can't statically be sure that a value will be present (even though intuitively you can know that it will be in certain contexts), so the optics must be prisms. Additionally, route optics are parameterised -- as shown, it is passed the name of the value sought, in this case "id").
 
-Another key point to note is that there are three available prisms available (all within the ``Route`` module). In this case, we see ``Route.atom_``, but ``Route.list_`` and ``Route.keys_`` are also available. Briefly, this is due to the nature of data within the URI Template specification. It is possible to render and match more complex data structures with URI Templates (see `the URI Template RFC <http://tools.ietf.org/html/rfc6570>`_ for a sense of how URI Templates can be used in more advanced ways). Simple values will only usually require the use of the ``Route.atom_`` optic, but see :doc:`/routers/examples` for some useful samples of using URI Templates to enable more powerful routing.
+Another key point to note is that there are three available prisms available (all within the ``Route`` module). In this case, ``Route.atom_`` is used, but ``Route.list_`` and ``Route.keys_`` are also available. Briefly, this is due to the nature of data within the URI Template specification. It is possible to render and match more complex data structures with URI Templates (see `the URI Template RFC <http://tools.ietf.org/html/rfc6570>`_ for a sense of how URI Templates can be used in more advanced ways). Simple values will only usually require the use of the ``Route.atom_`` optic, but see :doc:`/reference/libraries/routers/uri-template/examples` for some useful samples of using URI Templates to enable more powerful routing.
 
 Summary
 -------
 
-We've seen the simple approach to extracting data from matched routes, using simple optic based techniques.
+Techniques for accessing matched values using optics have been shown.
 
 .. code-block:: fsharp
 
-   open Freya.Router
+   open Freya.Routers.Uri.Template
 
    // Optic for extracting string values from a matched route
-   Route.atom_ : string -> Prism<FreyaState, string>
+   Route.atom_ : string -> Prism<State, string>
 
    // Optic for extracting string list values from a matched route
-   Route.list_ : string -> Prism<FreyaState, string list>
+   Route.list_ : string -> Prism<State, string list>
 
    // Optic for extracting string pair values from a matched route
-   Route.keys_ : string -> Prism<FreyaState, (string * string) list>
+   Route.keys_ : string -> Prism<State, (string * string) list>
+
+Recipes
+-------
+
+See also:
+
+* :doc:`/recipes/routing` -- as well as the library reference, a growing collection of routing recipes covering various techniques is maintained.
+

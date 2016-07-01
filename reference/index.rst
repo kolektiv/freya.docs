@@ -10,5 +10,5 @@ The reference documentation is divided in to two sections:
 
 When you're looking for more general information on how to work in Freya, and how to think about solving problems using Freya, you might want to look at some of the other documentation options, particularly:
 
-* :doc:`../topics/index` -- for focused guides to areas of development with Freya.
-* :doc:`../recipes/index` -- for Freya-based solutions to common problems.
+* Topics -- for focused guides to areas of development with Freya.
+* Recipes -- for Freya-based solutions to common problems.

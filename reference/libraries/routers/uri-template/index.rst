@@ -7,3 +7,8 @@ The URI Template router uses URI Templates -- supported by the :doc:`/reference/
 
    routes
    values
+
+See also:
+
+* :doc:`/recipes/routing` -- as well as the library reference, a growing collection of routing recipes covering various techniques is maintained.
+
