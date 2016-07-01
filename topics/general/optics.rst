@@ -18,4 +18,4 @@ Freya
 
 Optics are a key part of Freya usage, used to work with data throughout many elements of the Freya stack. They are discussed in the reference documentation, as well as being used throughout any tutorial or recipe documentation.
 
-* :doc:`/documentation/reference/libraries/core/optics` -- reference for optic usage in the **Freya.Core** library.
+* :doc:`/reference/libraries/core/optics` -- reference for optic usage in the **Freya.Core** library.

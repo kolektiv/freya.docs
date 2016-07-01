@@ -1,7 +1,0 @@
-URI Template
-============
-
-.. toctree::
-   :glob:
-      
-   *

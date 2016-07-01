@@ -1,7 +1,7 @@
 Functions
 =========
 
-The main abstraction in Freya is an abstraction over the OWIN state -- see :doc:`/documentation/topics/standards/owin`. As this is functional programming, you need to pass the state around to functions which require it (and return it from functions which have modified it).
+The main abstraction in Freya is an abstraction over the OWIN state -- see :doc:`/topics/standards/owin`. As this is functional programming, you need to pass the state around to functions which require it (and return it from functions which have modified it).
 
 Doing such a common thing manually would become a chore very quickly. The solution is the ``Freya<'a>`` function, which has the following type:
 
@@ -10,7 +10,7 @@ Doing such a common thing manually would become a chore very quickly. The soluti
    type Freya<'a> =
        State -> Async<'a * State>
 
-In the case of the Hopac variant of the Freya stack -- see :doc:`/documentation/topics/general/hopac` -- the type is instead defined as:
+In the case of the Hopac variant of the Freya stack -- see :doc:`/topics/general/hopac` -- the type is instead defined as:
 
 .. code-block:: fsharp
 

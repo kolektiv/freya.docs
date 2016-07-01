@@ -12,7 +12,7 @@ You should be able to use Freya with any OWIN compatible web server -- if you ca
 Functions
 ---------
 
-For reference for integrating with specific servers, see the :doc:`/documentation/reference/integration/index` documentation. In a general sense however, it is usually only needed to use one function to bridge the Freya and OWIN worlds. We need to be able to turn a Freya function in to an OWIN Application Function, or AppFunc.
+For reference for integrating with specific servers, see the :doc:`/reference/integration/index` documentation. In a general sense however, it is usually only needed to use one function to bridge the Freya and OWIN worlds. We need to be able to turn a Freya function in to an OWIN Application Function, or AppFunc.
 
 .. code-block:: fsharp
 

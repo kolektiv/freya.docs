@@ -3,7 +3,7 @@ Optics
 
 In the previous section, you saw that the underlying ``State`` instance, and elements of it, could be accessed within a Freya computation expression. While this is workable, it is an untidy and weak approach from the perspective of a strongly typed language.
 
-The solution to this in Freya is to use optics -- see the :doc:`/documentation/topics/general/optics` topic for a general introduction -- to enable a safer and more functional approach.
+The solution to this in Freya is to use optics -- see the :doc:`/topics/general/optics` topic for a general introduction -- to enable a safer and more functional approach.
 
 Approach
 --------
@@ -79,7 +79,7 @@ Here's a quick example, retrieving a header value from the request and receiving
            Partial (Type "text", Parameters (Map.empty)),
            Some (AcceptParameters (Weight 0.9, Extensions (Map.empty)))) ])
 
-Here a strongly typed representation of the "Accept" header is retrieved if it's present -- and you'll receive a fully decomposed, typed representation of that header which you can pattern match, inspect and work with -- see :doc:`/documentation/reference/libraries/types/index` for more on the type system that Freya uses.
+Here a strongly typed representation of the "Accept" header is retrieved if it's present -- and you'll receive a fully decomposed, typed representation of that header which you can pattern match, inspect and work with -- see :doc:`/reference/libraries/types/index` for more on the type system that Freya uses.
 
 Summary
 -------

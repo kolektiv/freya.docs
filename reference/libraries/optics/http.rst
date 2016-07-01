@@ -1,7 +1,7 @@
 HTTP
 ====
 
-The **Freya.Optics.Http** library provides optics from the ``State`` to the various aspects of the request and response, modelled using the types from **Freya.Types.Http** (and other Freya.Types.* libraries where needed). These optics are usable directly within a ``freya`` computation expression, working with the optic functions -- see :doc:`/documentation/reference/libraries/core/optics`.
+The **Freya.Optics.Http** library provides optics from the ``State`` to the various aspects of the request and response, modelled using the types from **Freya.Types.Http** (and other Freya.Types.* libraries where needed). These optics are usable directly within a ``freya`` computation expression, working with the optic functions -- see :doc:`/reference/libraries/core/optics`.
 
 The HTTP optics are likely to be the most commonly used optics dealing with request and response data. To use the optic the following modules should be opened:
 

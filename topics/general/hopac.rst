@@ -3,7 +3,7 @@ Hopac
 
 The "default" implementation of Freya uses F# async functions for most operations, and the internals are built as async. However, there is an alternative implementation available using the **Hopac** concurrent programming library available.
 
-The Hopac version of Freya is effectively identical in functionality and usage, but uses a different underlying concurrency model -- see :doc:`/documentation/reference/libraries/core/functions`. This can make Freya easier to integrate with existing code where Hopac is in use, and also potentially gives some performance/resource usage gains (the Freya Benchmarks project is beginning to measure these reliably).
+The Hopac version of Freya is effectively identical in functionality and usage, but uses a different underlying concurrency model -- see :doc:`/reference/libraries/core/functions`. This can make Freya easier to integrate with existing code where Hopac is in use, and also potentially gives some performance/resource usage gains (the Freya Benchmarks project is beginning to measure these reliably).
 
 Packages
 --------
