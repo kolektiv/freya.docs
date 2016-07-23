@@ -9,8 +9,5 @@ HTTP is a fairly involved set of standards, and to properly implement the semant
 
 .. toctree::
    
-   design
-   resources
-   extension
-   extensions/index
-   advanced/index
+   configuration
+   
