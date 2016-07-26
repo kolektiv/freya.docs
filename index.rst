@@ -35,6 +35,17 @@ Contributions to Freya (in any form) are very much welcomed, and if you wish to 
    help
 
 .. toctree::
+   :caption: Topics
+   :hidden:
+   :includehidden:
+
+   Overview <topics/index>
+   topics/general
+   topics/design
+   topics/standards
+   topics/versions
+
+.. toctree::
    :caption: Reference
    :hidden:
    :includehidden:
@@ -42,15 +53,6 @@ Contributions to Freya (in any form) are very much welcomed, and if you wish to 
    Overview <reference/index>
    reference/libraries/index
    reference/integration/index
-
-.. toctree::
-   :caption: Topics
-   :glob:
-   :hidden:
-   :includehidden:
-
-   Overview <topics/index>
-   topics/*
    
 .. toctree::
    :caption: Recipes
