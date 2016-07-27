@@ -109,16 +109,16 @@ todo_include_todos = True
 
 # -- Options for HTML output ----------------------------------------------
 
-on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+# on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 
-if not on_rtd:
+# if not on_rtd:
 #    import sphinx_rtd_theme
 
-    html_theme = 'freya'
-    html_theme_path = ['./_themes']
+html_theme = 'freya'
+html_theme_path = ['_themes']
     
 #    html_theme = 'sphinx_rtd_theme'
 #    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
