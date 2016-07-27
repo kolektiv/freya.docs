@@ -5,5 +5,6 @@ Routing is a potentially complex topic which also usually conforms to various pa
 
 .. toctree::
    :glob:
-
+   :maxdepth: 1
+   
    routing/*

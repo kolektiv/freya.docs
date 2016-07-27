@@ -12,13 +12,13 @@ The **Freya.Types.Http** library implements types which represent the semantics 
 
 This set of RFCs covers basic types present in HTTP requests and responses, principally the data found in the headers of HTTP messages. Strongly typed representations and parsers are given.
 
+.. note::
+
+   Full documentation for the individual type designs within Freya.Types.Http is not currently available, but will be added at a later stage. Inspecting the values returned however should be straightforward and logical, and all typed representations map very closely to the logical design/grammar defined within the appropriate RFC or Recommendation.
 To use the types:
 
 .. code-block:: fsharp
 
    // Working with the types
    open Freya.Types.Http
-   
-.. note::
 
-   Full documentation for the individual type designs within Freya.Types.Http is not currently available, but will be added at a later stage. Inspecting the values returned however should be straightforward and logical, and all typed representations map very closely to the logical design/grammar defined within the appropriate RFC or Recommendation.

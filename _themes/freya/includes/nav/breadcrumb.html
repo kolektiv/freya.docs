@@ -1,0 +1,8 @@
+<nav class="breadcrumb">
+  <ul>
+    <li><a href="{{ pathto(master_doc) }}">Home</a></li>
+    {% for doc in parents %}
+    <li><a href="{{ doc.link | e }}">{{ doc.title }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>

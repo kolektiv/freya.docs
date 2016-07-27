@@ -1,0 +1,10 @@
+{%- if builder != 'singlehtml' %}
+<p class="caption">
+  <span class="caption-text">Search</span>
+</p>
+<form class="search" action="{{ pathto('search') }}" method="get">
+  <input type="text" name="q" placeholder="e.g. machines" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+{%- endif %}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ title | striptags | e }} &mdash; Freya</title>
+    <link href="http://freya-designs.dev/css/freya.css" rel="stylesheet">
+    {# <link href="{{ pathto('_static/css/theme.css', 1) }}" rel="stylesheet"> #}
+  </head>
+  <body>
+    {% include "includes/common/header.html" %}
+    {% include "includes/nav/breadcrumb.html" %}
+    {% include "includes/nav/directional.html" %}
+    <section class="main">
+      {% include "includes/nav/content.html" %}
+      <article>
+        {% block body %}{% endblock %}
+      </article>
+    </section>
+
+    {# include "includes/meta/version.html" #}
+    {# include "includes/meta/edit.html" #}
+    {# include "includes/search/search.html" #}
+
+  </body>
+</html>
