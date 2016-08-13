@@ -30,5 +30,5 @@ Servers
 
 As you can see from the simplicity of the interface (known as the *AppFunc* or *OwinAppFunc*), there's not much that a library needs to be able to do to work with a compatible OWIN server. Different OWIN servers, however, have different ways of asking for that *AppFunc*, so you may need to peruse the documentation for your specific server.
 
-In the examples and tutorials we'll see later, we'll often use the `Katana <https://katanaproject.codeplex.com/>`_ server, and we'll show how simple it is to host Freya using that. If you're using something else, it may be documented -- see :doc:`/reference/integration/servers`. If not, feel free to either ask for guidance or even submit documentation -- see :doc:`/contributing`!
+In the examples and tutorials we'll see later, we'll often use the `Katana <https://katanaproject.codeplex.com/>`_ server, and we'll show how simple it is to host Freya using that. If you're using something else, it may be documented -- see :doc:`/reference/integration/servers`. If not, feel free to either ask for guidance or even submit documentation -- see :doc:`/meta/contributing`!
 

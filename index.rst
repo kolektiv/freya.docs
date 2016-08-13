@@ -31,8 +31,7 @@ Contributions to Freya (in any form) are very much welcomed, and if you wish to 
    :hidden:
 
    self
-   contributing
-   help
+   meta/index
 
 .. toctree::
    :caption: Topics

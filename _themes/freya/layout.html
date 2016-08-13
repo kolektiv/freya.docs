@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>{{ title | striptags | e }} &mdash; Freya</title>
     <link href="http://freya-designs.dev/css/freya.css" rel="stylesheet">
-    {# <link href="{{ pathto('_static/css/theme.css', 1) }}" rel="stylesheet"> #}
+    <link href="{{ pathto('_static/favicon.ico', 1) }}" rel="shortcut icon">
   </head>
   <body>
     {% include "includes/common/header.html" %}
@@ -16,7 +16,8 @@
         {% block body %}{% endblock %}
       </article>
     </section>
-
+    {% include "includes/common/footer.html" %}
+    
     {# include "includes/meta/version.html" #}
     {# include "includes/meta/edit.html" #}
     {# include "includes/search/search.html" #}
